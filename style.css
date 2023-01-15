@@ -1,0 +1,150 @@
+body {
+    background-color:mediumorchid;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    margin: 20px;;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.head{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid black;
+    background: white;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: baseline;
+
+}
+
+.head::before{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: inset -22px 5px 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.head::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background: white;
+    margin-top: 300px;
+    border: 10px solid black;
+}
+
+.left, .right {
+    background: black;
+    border-radius: 50%;
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    margin-left: -180px;
+
+}
+
+.right {
+    margin-left: 180px;
+}
+
+.left::before, .right::before{
+    content: "";
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    box-shadow: inset -22px 5px 0 3px rgba(255, 255, 255, 0.16);
+}
+
+.left::after, .right::after{
+    content:"";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+}
+
+
+.cutout{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: lightpink;
+    border-radius: 50%;
+    align-self: flex-end;
+    margin-bottom: -50px;
+
+}
+
+.mouth{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    border: 10px solid black;
+    border-radius: 50%;
+    align-self: center;
+    clip-path: circle(60% at 49% 100%);
+}
+
+.mouth::before, .mouth::after{
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 10px solid black;
+    top: 102px;
+    left: -9px;
+    clip-path: circle(50% at 0 0);
+}
+
+.mouth::after{
+    left:140px;
+    top: 107px;
+    clip-path: circle(50% at 100% 0);
+}
+
+.body{
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    background: rgb(70, 199, 204);
+    top: 350px;
+    border: 10px solid black;
+    border-radius: 100% 100% 100% 100% / 100% 100% 0% 0%;
+}
+
+.body::before, .body::after{
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 20px;
+    top: 30px;
+}
+
+.body::before{
+    border-right: 10px solid black;
+}
+
+.body::after{
+    border-left: 10px solid black;
+    right:0;
+}
